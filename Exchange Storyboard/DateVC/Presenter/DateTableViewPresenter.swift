@@ -48,6 +48,11 @@ extension DateTableViewPresenter:
         
         view?.showDate(date: dates)
     }
+    
+    func didLoadMore(moreDates: [String]) {
+        
+        view?.addDates(date: moreDates)
+    }
 }
 
 

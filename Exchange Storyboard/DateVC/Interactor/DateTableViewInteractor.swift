@@ -32,4 +32,14 @@ final class DateTableViewInteractor:  DateTableViewInteractorInput {
             }
         }
     }
+    func loadMoreDate() {
+        datesServise.getData(month: monthInteractor) { [weak self] result in
+            switch result {
+            case.success(let moreDates):
+                self?.output?.didLoadMore(moreDates: moreDates)
+            case.failure(_):
+                let error = "Неполучается получить еще даты"
+            }
+        }
+    }
 }

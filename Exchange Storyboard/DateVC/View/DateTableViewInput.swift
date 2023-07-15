@@ -14,4 +14,6 @@ protocol DateTableViewInput: AnyObject {
     
     // Показать во view ошибку
     func showError(error: String)
+    
+    func addDates(date:[String])
 }

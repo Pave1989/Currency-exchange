@@ -15,7 +15,6 @@
 		824A8B5E2A3F843900D1ECED /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B5D2A3F843900D1ECED /* DateService.swift */; };
 		824A8B622A3F8F6100D1ECED /* RateServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B612A3F8F6100D1ECED /* RateServiceProtocol.swift */; };
 		824A8B642A3F8F7400D1ECED /* RateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B632A3F8F7400D1ECED /* RateService.swift */; };
-		824A8B672A3F8FAA00D1ECED /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 824A8B662A3F8FAA00D1ECED /* Alamofire */; };
 		824A8B6A2A3F8FD000D1ECED /* MoneyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B692A3F8FD000D1ECED /* MoneyModel.swift */; };
 		824A8B6E2A3F901C00D1ECED /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B6D2A3F901C00D1ECED /* NetworkingError.swift */; };
 		824A8B712A3F906A00D1ECED /* Rate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 824A8B702A3F906A00D1ECED /* Rate.storyboard */; };
@@ -108,7 +107,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824A8B672A3F8FAA00D1ECED /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,7 +374,6 @@
 			);
 			name = "Exchange Storyboard";
 			packageProductDependencies = (
-				824A8B662A3F8FAA00D1ECED /* Alamofire */,
 			);
 			productName = "Exchange Storyboard";
 			productReference = 82B2792D2A3E478600D9532A /* Exchange Storyboard.app */;
@@ -407,7 +404,6 @@
 			);
 			mainGroup = 82B279242A3E478600D9532A;
 			packageReferences = (
-				824A8B652A3F8FAA00D1ECED /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 82B2792E2A3E478600D9532A /* Products */;
 			projectDirPath = "";
@@ -698,25 +694,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		824A8B652A3F8FAA00D1ECED /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		824A8B662A3F8FAA00D1ECED /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 824A8B652A3F8FAA00D1ECED /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 82B279252A3E478600D9532A /* Project object */;
 }

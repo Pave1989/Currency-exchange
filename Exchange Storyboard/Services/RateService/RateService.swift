@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Alamofire
+//import Alamofire
 // MARK: - декомпозировать сетевой слой
 class RateService: RateServiceProtocol {
     
