@@ -10,8 +10,7 @@ import UIKit
 
 class DateService: DateServiceProtocol {
 
-    func getData(month: Double, complition: @escaping (Result<[String], Error>) -> Void) {
-        print("From Service \(month)")
+    func getData(fetchDays: Double, complition: @escaping (Result<[String], Error>) -> Void) {
         
         var dates = [String]() //пустой массив хранения дат
         
@@ -26,8 +25,9 @@ class DateService: DateServiceProtocol {
         let date = Date()
         let date0 = Calendar.current.startOfDay(for: date)
         var dateNow = date0 + (60*60*24) //текущий день
-        dateNow = dateNow - (60*60*24) * month //вычитаем приходящее значение(дни)
-        print("NewDateNow: \(dateNow)")
+        dateNow = dateNow - (60*60*24) * fetchDays //вычитаем приходящее значение(дни)
+        print("CurrentDay: \(dateNow)")
+        print("DeductionDays: \(fetchDays)")
         //для того чтобы указать тип календаря(григарианский или другой)
         let calendar = Calendar.current
         let lastDate = calendar.date(byAdding: past, to: dateNow)
@@ -39,11 +39,12 @@ class DateService: DateServiceProtocol {
             dateNow = calendar.date(byAdding: dayAgoComponent, to: dateNow)!
             dates.append(dateFormater.string(from: dateNow))
         }
-        
+        //если пустой массив отправляем ошибку
         if dates == [] {
             complition(.failure(NetworkingError.invalidData))
         }else{
             complition(.success(dates))
+            print(dates)
         }
     }
 }

@@ -9,5 +9,5 @@ import Foundation
 
 protocol DateServiceProtocol {
 
-    func getData(month: Double, complition: @escaping (Result<[String], Error>) -> Void)
+    func getData(fetchDays: Double, complition: @escaping (Result<[String], Error>) -> Void)
 }

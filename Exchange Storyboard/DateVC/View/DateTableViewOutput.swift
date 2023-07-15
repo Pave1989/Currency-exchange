@@ -8,10 +8,12 @@
 import Foundation
 
 protocol DateTableViewOutput {
-    
+    // Pагрузка данных для запуска
     func viewDidLoad()
     // Прокидывается дата в выбранной ячейке
     func didTapCell(dateTap: String)
-    // Прокидывается значение колличества необходимых ячеек
-    func addMonth(month: Double)
+    // Загрузка дополнительных данных в таблицу
+    func fetchNext()
+    // Проверка начальных данных для продолжения загрузки
+    func isFirstPage() -> Bool
 }

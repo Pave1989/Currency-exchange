@@ -12,6 +12,7 @@ final class RateViewInteractor: RateViewInteractorInput{
     weak var output: RateViewInteractorOutput?
     let rateService = RateService()
     let convertDateService = ConvertDateFormatService()
+    let errorData = "данные отсутствуют"
     var dateVC: String
     
     init(dateVC: String){
@@ -27,7 +28,7 @@ final class RateViewInteractor: RateViewInteractorInput{
             case .success(let model):
                 guard let dollar = model?.data?.rub?.value else {
                     print(NetworkingError.invalidData)
-                    let error = "данные отсутствуют"
+                    let error = self!.errorData                // ???
                     self?.output?.didRecevie(error: error)
                     return
                 }
@@ -47,7 +48,7 @@ final class RateViewInteractor: RateViewInteractorInput{
             case .success(let model):
                 guard let euro = model?.data?.rub?.value else {
                     print(NetworkingError.invalidData)
-                    let error = "отсутствие данных"
+                    let error = "данные отсутствуют"
                     self?.output?.didRecevie(error: error)
                     return
                 }

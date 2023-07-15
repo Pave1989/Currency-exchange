@@ -10,10 +10,8 @@ import Foundation
 protocol DateTableViewInput: AnyObject {
     
     // Показать во view даты
-    func showDate(date:[String])
+    func showDate(dates:[String])
     
     // Показать во view ошибку
     func showError(error: String)
-    
-    func addDates(date:[String])
 }

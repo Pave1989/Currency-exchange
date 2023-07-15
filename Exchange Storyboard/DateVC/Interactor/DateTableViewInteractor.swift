@@ -11,34 +11,17 @@ final class DateTableViewInteractor:  DateTableViewInteractorInput {
     
     weak var output: DateTableViewInteractorOutput?
     var datesServise = DateService()
-    var monthInteractor: Double = 0.0
 
-    //сюда приходит значение от вью
-    func loadMonth(month: Double) {
+    func loadDate(days: Double) {
         
-        self.monthInteractor = month
-    }
-
-    func loadDate() {
-        
-        datesServise.getData(month: monthInteractor) {
+        datesServise.getData(fetchDays: days) {
             [weak self] result in
             switch result {
             case.success(let data):
-                self?.output?.didLoad(dates: data)
+                self?.output?.didLoad(dates: data, availableDays: days)
             case.failure(_):
                 let error = "данные отсутствуют"
                 self?.output?.didRecevie(error: error)
-            }
-        }
-    }
-    func loadMoreDate() {
-        datesServise.getData(month: monthInteractor) { [weak self] result in
-            switch result {
-            case.success(let moreDates):
-                self?.output?.didLoadMore(moreDates: moreDates)
-            case.failure(_):
-                let error = "Неполучается получить еще даты"
             }
         }
     }

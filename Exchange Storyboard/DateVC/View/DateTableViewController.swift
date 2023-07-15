@@ -12,12 +12,9 @@ final class DateTableViewController: UITableViewController {
     private let cellID = "cellID"
     private let headerID = "headerID"
     private let loadingID = "loadingID"
-    private var datesArray: [String] = []
-    private var datesArrayAdd: [String] = []
+    private var datesArray: [String] = [] // массив для загрузки из сервиса
     private var titleDate: String = "Список дат:"
-    private var month: Double = 0.0
-    private var monthAgo: Double = 30.0
-    private var scrollActive: Bool = false //чтобы пагинация не срабатывала n-раз
+    private var scrollActive: Bool = false //булева чтобы пагинация не срабатывала n-раз
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +22,16 @@ final class DateTableViewController: UITableViewController {
         output?.viewDidLoad()
         tableView.register(UINib(nibName: String(describing: DateTableViewCell.self), bundle: nil), forCellReuseIdentifier: cellID)
         tableView.register(UINib(nibName: String(describing: DateHeaderTableViewCell.self), bundle: nil), forHeaderFooterViewReuseIdentifier: headerID)
-        tableView.register(UINib(nibName: String(describing: LoadingTableViewCell.self), bundle: nil), forCellReuseIdentifier: loadingID)        
-        
+        tableView.register(UINib(nibName: String(describing: LoadingTableViewCell.self), bundle: nil), forCellReuseIdentifier: loadingID)
     }
-
+// HeaderCell:
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerID) as! DateHeaderTableViewCell
-        
         header.dateTitleLabel.text = titleDate
+        
         return header
     }
-    
+// TableCell:
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
             return datesArray.count
@@ -46,11 +42,13 @@ final class DateTableViewController: UITableViewController {
         if indexPath.row == datesArray.count - 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: loadingID) as! LoadingTableViewCell
             cell.loadIndicator.startAnimating()
+            
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DateTableViewCell
             let textValue = datesArray[indexPath.row]
             cell.dateLabel.text = "\(textValue)"
+            
             return cell
         }
     }
@@ -66,33 +64,24 @@ final class DateTableViewController: UITableViewController {
         if indexPath.row == datesArray.count - 1{
             if !scrollActive {
                 self.scrollActive = true
-                loadMoreData()
+                output?.fetchNext()
             }
-        }
-        func loadMoreData(){
-
-            month = month - monthAgo
-            output?.addMonth(month: month)
-            print("From VC: \(month)")
-            print(datesArrayAdd)
-            tableView.reloadData()
         }
     }
  }
 
 extension DateTableViewController: DateTableViewInput {
-    
-    func addDates(date: [String]) {
-        
-        self.datesArrayAdd = date
-        tableView.reloadData()
-    }
-    
-    //MARK: - нужен метод для повторного изьятия у сервиса массива дат и добавление его к имеющемуся!
-    
-    func showDate(date: [String]) {
 
-        self.datesArray = date
+    func showDate(dates: [String]) {
+
+        scrollActive = false
+        if (output!.isFirstPage()) {
+            self.datesArray = dates
+        } else {
+            for item in dates {
+                self.datesArray.append(item)
+            }
+        }
         self.tableView.reloadData()
     }
     
