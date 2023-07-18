@@ -65,11 +65,6 @@ extension DateTableViewPresenter:
         lastDays = availableDays
         view?.showDate(dates: dates)
     }
-    
-//    func didLoadMore(moreDates: [String]) {
-//        
-//        view?.addDates(date: moreDates)
-//    }
 }
 
 

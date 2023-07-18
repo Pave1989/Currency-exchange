@@ -23,7 +23,7 @@ class DateModuleBuilder {
     interactor.output = presenter
     viewController.output = presenter
     router.viewController = viewController
-    interactor.datesServise = DateService()
+    interactor.datesService = DateService()
             
     return viewController
  }

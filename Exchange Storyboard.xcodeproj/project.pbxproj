@@ -30,6 +30,8 @@
 		824A8B892A3F9F8000D1ECED /* RateViewRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B882A3F9F8000D1ECED /* RateViewRouterInput.swift */; };
 		824A8B8B2A3F9F9800D1ECED /* RateViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B8A2A3F9F9800D1ECED /* RateViewRouter.swift */; };
 		824A8B8D2A3F9FBE00D1ECED /* RateViewModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B8C2A3F9FBD00D1ECED /* RateViewModuleBuilder.swift */; };
+		8295547F2A65CBD400C79B5A /* Exchange_StoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8295547E2A65CBD400C79B5A /* Exchange_StoryboardTests.swift */; };
+		829554862A65CC3500C79B5A /* MyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829554852A65CC3500C79B5A /* MyServiceTests.swift */; };
 		82B279312A3E478600D9532A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279302A3E478600D9532A /* AppDelegate.swift */; };
 		82B279332A3E478600D9532A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279322A3E478600D9532A /* SceneDelegate.swift */; };
 		82B279382A3E478600D9532A /* Date.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B279362A3E478600D9532A /* Date.storyboard */; };
@@ -52,6 +54,16 @@
 		82FD0CA82A41A5A500F05EEC /* DateTableViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA72A41A5A500F05EEC /* DateTableViewRouter.swift */; };
 		82FD0CAA2A41A5CA00F05EEC /* DateModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0CA92A41A5CA00F05EEC /* DateModuleBuilder.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		829554802A65CBD400C79B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82B279252A3E478600D9532A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82B2792C2A3E478600D9532A;
+			remoteInfo = "Exchange Storyboard";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		82000C7B2A4390C80003F831 /* ConvertDateFormatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertDateFormatService.swift; sourceTree = "<group>"; };
@@ -77,6 +89,9 @@
 		824A8B882A3F9F8000D1ECED /* RateViewRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewRouterInput.swift; sourceTree = "<group>"; };
 		824A8B8A2A3F9F9800D1ECED /* RateViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewRouter.swift; sourceTree = "<group>"; };
 		824A8B8C2A3F9FBD00D1ECED /* RateViewModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewModuleBuilder.swift; sourceTree = "<group>"; };
+		8295547C2A65CBD400C79B5A /* Exchange StoryboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Exchange StoryboardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8295547E2A65CBD400C79B5A /* Exchange_StoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange_StoryboardTests.swift; sourceTree = "<group>"; };
+		829554852A65CC3500C79B5A /* MyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceTests.swift; sourceTree = "<group>"; };
 		82B2792D2A3E478600D9532A /* Exchange Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exchange Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B279302A3E478600D9532A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B279322A3E478600D9532A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +118,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		829554792A65CBD400C79B5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82B2792A2A3E478600D9532A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,10 +269,20 @@
 			path = LoadingCell;
 			sourceTree = "<group>";
 		};
+		8295547D2A65CBD400C79B5A /* Exchange StoryboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				8295547E2A65CBD400C79B5A /* Exchange_StoryboardTests.swift */,
+				829554852A65CC3500C79B5A /* MyServiceTests.swift */,
+			);
+			path = "Exchange StoryboardTests";
+			sourceTree = "<group>";
+		};
 		82B279242A3E478600D9532A = {
 			isa = PBXGroup;
 			children = (
 				82B2792F2A3E478600D9532A /* Exchange Storyboard */,
+				8295547D2A65CBD400C79B5A /* Exchange StoryboardTests */,
 				82B2792E2A3E478600D9532A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -259,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				82B2792D2A3E478600D9532A /* Exchange Storyboard.app */,
+				8295547C2A65CBD400C79B5A /* Exchange StoryboardTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -360,6 +393,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8295547B2A65CBD400C79B5A /* Exchange StoryboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 829554842A65CBD400C79B5A /* Build configuration list for PBXNativeTarget "Exchange StoryboardTests" */;
+			buildPhases = (
+				829554782A65CBD400C79B5A /* Sources */,
+				829554792A65CBD400C79B5A /* Frameworks */,
+				8295547A2A65CBD400C79B5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				829554812A65CBD400C79B5A /* PBXTargetDependency */,
+			);
+			name = "Exchange StoryboardTests";
+			productName = "Exchange StoryboardTests";
+			productReference = 8295547C2A65CBD400C79B5A /* Exchange StoryboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		82B2792C2A3E478600D9532A /* Exchange Storyboard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82B279412A3E478700D9532A /* Build configuration list for PBXNativeTarget "Exchange Storyboard" */;
@@ -389,6 +440,10 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					8295547B2A65CBD400C79B5A = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 82B2792C2A3E478600D9532A;
+					};
 					82B2792C2A3E478600D9532A = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -410,11 +465,19 @@
 			projectRoot = "";
 			targets = (
 				82B2792C2A3E478600D9532A /* Exchange Storyboard */,
+				8295547B2A65CBD400C79B5A /* Exchange StoryboardTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8295547A2A65CBD400C79B5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82B2792B2A3E478600D9532A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -432,6 +495,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		829554782A65CBD400C79B5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8295547F2A65CBD400C79B5A /* Exchange_StoryboardTests.swift in Sources */,
+				829554862A65CC3500C79B5A /* MyServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82B279292A3E478600D9532A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -478,6 +550,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		829554812A65CBD400C79B5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82B2792C2A3E478600D9532A /* Exchange Storyboard */;
+			targetProxy = 829554802A65CBD400C79B5A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		82B279362A3E478600D9532A /* Date.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -498,6 +578,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		829554822A65CBD400C79B5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3V35N9JX9X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NuarCompany.Exchange-StoryboardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Exchange Storyboard.app/Exchange Storyboard";
+			};
+			name = Debug;
+		};
+		829554832A65CBD400C79B5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3V35N9JX9X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NuarCompany.Exchange-StoryboardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Exchange Storyboard.app/Exchange Storyboard";
+			};
+			name = Release;
+		};
 		82B2793F2A3E478700D9532A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -675,6 +791,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		829554842A65CBD400C79B5A /* Build configuration list for PBXNativeTarget "Exchange StoryboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				829554822A65CBD400C79B5A /* Debug */,
+				829554832A65CBD400C79B5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		82B279282A3E478600D9532A /* Build configuration list for PBXProject "Exchange Storyboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

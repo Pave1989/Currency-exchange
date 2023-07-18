@@ -10,11 +10,11 @@ import Foundation
 final class DateTableViewInteractor:  DateTableViewInteractorInput {
     
     weak var output: DateTableViewInteractorOutput?
-    var datesServise = DateService()
+    var datesService = DateService()
 
     func loadDate(days: Double) {
         
-        datesServise.getData(fetchDays: days) {
+        datesService.getData(fetchDays: days) {
             [weak self] result in
             switch result {
             case.success(let data):
