@@ -27,7 +27,7 @@ class RateService: RateServiceProtocol {
 //MARK: Get Dollar
     func getUSD(date1: String, completion: @escaping (Result <MoneyModel?, Error>) -> Void) {
 
-        guard let getURL = URL(string: "https://pi.currencyapi.com/v3/historical?apikey=brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01&date=\(date1)&base_currency=USD&currencies=RUB") else {
+        guard let getURL = URL(string: "https://api.currencyapi.com/v3/historical?apikey=brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01&date=\(date1)&base_currency=USD&currencies=RUB") else {
             completion(.failure(NetworkingError.badUrl))
             return
         }
@@ -73,7 +73,7 @@ class RateService: RateServiceProtocol {
 
     func getEUR(date1: String, completion: @escaping (Result <MoneyModel?, Error>) -> Void) {
         
-        guard let getURL = URL(string: "https://pi.currencyapi.com/v3/historical?apikey=brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01&date=\(date1)&base_currency=EUR&currencies=RUB") else {
+        guard let getURL = URL(string: "https://api.currencyapi.com/v3/historical?apikey=brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01&date=\(date1)&base_currency=EUR&currencies=RUB") else {
             completion(.failure(NetworkingError.badUrl))
             return
         }
