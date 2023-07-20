@@ -18,6 +18,12 @@ final class RateViewInteractor: RateViewInteractorInput{
     init(dateVC: String){
         self.dateVC = dateVC
     }
+    // MARK: - обрезка до значения до 2 чисел после запятой
+    func cutDigits(number: Double) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.maximumFractionDigits = 2
+        return numberFormatter.string(from: number as NSNumber)!
+    }
 //MARK: - получение доллара
     func loadDollar() {
         
@@ -26,12 +32,13 @@ final class RateViewInteractor: RateViewInteractorInput{
            
             switch dateUSD {
             case .success(let model):
-                guard let dollar = model?.data?.rub?.value else {
+                guard let value = model?.data?.rub?.value else {
                     print(NetworkingError.invalidData)
-                    let error = self!.errorData                // ???
+                    let error = self!.errorData
                     self?.output?.didRecevie(error: error)
                     return
                 }
+                let dollar = self?.cutDigits(number: value) ?? "0.00"
                 self?.output?.didLoadUSD(usdResult: dollar)
             case .failure(let error):
                 print(error)
@@ -46,12 +53,13 @@ final class RateViewInteractor: RateViewInteractorInput{
             
             switch dateEUR {
             case .success(let model):
-                guard let euro = model?.data?.rub?.value else {
+                guard let value = model?.data?.rub?.value else {
                     print(NetworkingError.invalidData)
                     let error = "данные отсутствуют"
                     self?.output?.didRecevie(error: error)
                     return
                 }
+                let euro = self?.cutDigits(number: value) ?? "0.00"
                 self?.output?.didLoadEUR(eurResult: euro)
             case .failure(let error):
                 print(error)

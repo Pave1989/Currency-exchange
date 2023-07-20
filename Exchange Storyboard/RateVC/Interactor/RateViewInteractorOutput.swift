@@ -13,8 +13,8 @@ protocol RateViewInteractorOutput: AnyObject {
     func didRecevie(error: String)
     
     // загрузка курса доллара
-    func didLoadUSD(usdResult: Double)
+    func didLoadUSD(usdResult: String)
     
     // загрузка курса евро
-    func didLoadEUR(eurResult: Double)
+    func didLoadEUR(eurResult: String)
 }

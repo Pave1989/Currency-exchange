@@ -35,11 +35,11 @@ extension RateViewPresenter: RateViewInteractorOutput {
         view?.showError(error: error)
     }
  
-    func didLoadUSD(usdResult: Double) {
+    func didLoadUSD(usdResult: String) {
         view?.showUSD(usd: usdResult)
     }
     
-    func didLoadEUR(eurResult: Double) {
+    func didLoadEUR(eurResult: String) {
         view?.showEUR(eur: eurResult)
     }
 }

@@ -13,10 +13,10 @@ protocol RateViewInput: AnyObject {
     func showDate(date: String)
     
     // показать во view курс доллара
-    func showUSD(usd: Double)
+    func showUSD(usd: String)
     
     // показать во view курс евро
-    func showEUR(eur: Double)
+    func showEUR(eur: String)
     
     // показать во вью ошибку
     func showError(error: String)

@@ -27,15 +27,15 @@ extension RateViewController: RateViewInput {
             self.dateTitleLabel.text = date
     }
     
-    func showUSD(usd: Double) {
+    func showUSD(usd: String) {
         DispatchQueue.main.async {
-            self.dollarValueLabel.text = String(usd)
+            self.dollarValueLabel.text = usd
         }            
     }
     
-    func showEUR(eur: Double) {
+    func showEUR(eur: String) {
         DispatchQueue.main.async {
-            self.euroValueLabel.text = String(eur)
+            self.euroValueLabel.text = eur
         }     
     }
     

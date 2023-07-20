@@ -18,7 +18,7 @@ final class DateTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                       
         output?.viewDidLoad()
         tableView.register(UINib(nibName: String(describing: DateTableViewCell.self), bundle: nil), forCellReuseIdentifier: cellID)
         tableView.register(UINib(nibName: String(describing: DateHeaderTableViewCell.self), bundle: nil), forHeaderFooterViewReuseIdentifier: headerID)
@@ -30,6 +30,11 @@ final class DateTableViewController: UITableViewController {
         header.dateTitleLabel.text = titleDate
         
         return header
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+       
+        80
     }
 // TableCell:
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,6 +53,7 @@ final class DateTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DateTableViewCell
             let textValue = datesArray[indexPath.row]
             cell.dateLabel.text = "\(textValue)"
+            cell.selectionStyle = .none
             
             return cell
         }
