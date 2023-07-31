@@ -20,7 +20,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Список дат:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyb-rP-Qgx">
                         <rect key="frame" x="20" y="43.5" width="119.5" height="26.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -30,6 +30,7 @@
                     <constraint firstAttribute="bottom" secondItem="Nyb-rP-Qgx" secondAttribute="bottom" constant="10" id="afb-MJ-7L1"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">

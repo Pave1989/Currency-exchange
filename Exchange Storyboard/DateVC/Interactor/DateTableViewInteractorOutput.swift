@@ -13,5 +13,5 @@ protocol DateTableViewInteractorOutput: AnyObject {
     func didRecevie(error: String)
     
     // загрузка дат успешно произведена
-    func didLoad(dates: [String], availableDays: Double)
+    func didLoad(dates: [String], availableDays: Int)
 }

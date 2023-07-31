@@ -9,5 +9,5 @@ import Foundation
 
 protocol DateTableViewInteractorInput {
 
-    func loadDate(days: Double)
+    func loadDate(days: Int)
 }

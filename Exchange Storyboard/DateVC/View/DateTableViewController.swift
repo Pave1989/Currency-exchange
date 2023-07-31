@@ -23,6 +23,7 @@ final class DateTableViewController: UITableViewController {
         tableView.register(UINib(nibName: String(describing: DateTableViewCell.self), bundle: nil), forCellReuseIdentifier: cellID)
         tableView.register(UINib(nibName: String(describing: DateHeaderTableViewCell.self), bundle: nil), forHeaderFooterViewReuseIdentifier: headerID)
         tableView.register(UINib(nibName: String(describing: LoadingTableViewCell.self), bundle: nil), forCellReuseIdentifier: loadingID)
+        tableView.backgroundColor = .white
     }
 // HeaderCell:
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

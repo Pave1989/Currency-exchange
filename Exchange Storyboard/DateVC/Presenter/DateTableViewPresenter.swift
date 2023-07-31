@@ -12,8 +12,8 @@ final class DateTableViewPresenter {
     weak var view: DateTableViewInput?
     var interactor: DateTableViewInteractorInput
     var router: DateTableViewRouterOutput
-    private var currentDays = 0.0
-    private var lastDays = 1.0
+    private var currentDays = 0
+    private var lastDays = 1
     
     init(
          interactor: DateTableViewInteractorInput,
@@ -61,7 +61,7 @@ extension DateTableViewPresenter:
         view?.showError(error: error)
     }
     
-    func didLoad(dates: [String], availableDays: Double) {
+    func didLoad(dates: [String], availableDays: Int) {
         lastDays = availableDays
         view?.showDate(dates: dates)
     }

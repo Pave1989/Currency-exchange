@@ -11,7 +11,8 @@
 		82000C7E2A4391150003F831 /* ConvertDateFormatServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82000C7D2A4391150003F831 /* ConvertDateFormatServiceProtocol.swift */; };
 		820A756A2A59825A00AB7077 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820A75682A59825A00AB7077 /* LoadingTableViewCell.swift */; };
 		820A756B2A59825A00AB7077 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 820A75692A59825A00AB7077 /* LoadingTableViewCell.xib */; };
-		822E4C072A671D00003FBEFF /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822E4C062A671D00003FBEFF /* UIViewExtension.swift */; };
+		82195DD12A753D7F00E4BCEC /* DateServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82195DD02A753D7F00E4BCEC /* DateServiceSpy.swift */; };
+		821AE0302A6DB8570000DD1D /* RateServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821AE02F2A6DB8570000DD1D /* RateServiceTests.swift */; };
 		824A8B5C2A3F841B00D1ECED /* DateServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B5B2A3F841B00D1ECED /* DateServiceProtocol.swift */; };
 		824A8B5E2A3F843900D1ECED /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B5D2A3F843900D1ECED /* DateService.swift */; };
 		824A8B622A3F8F6100D1ECED /* RateServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B612A3F8F6100D1ECED /* RateServiceProtocol.swift */; };
@@ -31,8 +32,15 @@
 		824A8B892A3F9F8000D1ECED /* RateViewRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B882A3F9F8000D1ECED /* RateViewRouterInput.swift */; };
 		824A8B8B2A3F9F9800D1ECED /* RateViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B8A2A3F9F9800D1ECED /* RateViewRouter.swift */; };
 		824A8B8D2A3F9FBE00D1ECED /* RateViewModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824A8B8C2A3F9FBD00D1ECED /* RateViewModuleBuilder.swift */; };
-		8295547F2A65CBD400C79B5A /* Exchange_StoryboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8295547E2A65CBD400C79B5A /* Exchange_StoryboardTests.swift */; };
-		829554862A65CC3500C79B5A /* MyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829554852A65CC3500C79B5A /* MyServiceTests.swift */; };
+		825438CF2A6DA15700C9C9F1 /* DateServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 825438CE2A6DA15700C9C9F1 /* DateServiceTests.swift */; };
+		827BD9542A71A06300CBB701 /* RateServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BD9532A71A06300CBB701 /* RateServiceSpy.swift */; };
+		827BD9572A71A36800CBB701 /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BD9562A71A36800CBB701 /* NetworkingProtocol.swift */; };
+		827BD9592A71A3F100CBB701 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BD9582A71A3F100CBB701 /* NetworkService.swift */; };
+		827BD95B2A71A46C00CBB701 /* DataFetcherProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BD95A2A71A46C00CBB701 /* DataFetcherProtocol.swift */; };
+		827BD95D2A71A56800CBB701 /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827BD95C2A71A56800CBB701 /* NetworkDataFetcher.swift */; };
+		82900A7C2A78543300EBCD6C /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82900A792A78543300EBCD6C /* UIViewExtension.swift */; };
+		82900A7D2A78543300EBCD6C /* UiTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82900A7A2A78543300EBCD6C /* UiTableView.swift */; };
+		82900A7E2A78543300EBCD6C /* CornerRadExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82900A7B2A78543300EBCD6C /* CornerRadExt.swift */; };
 		82B279312A3E478600D9532A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279302A3E478600D9532A /* AppDelegate.swift */; };
 		82B279332A3E478600D9532A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B279322A3E478600D9532A /* SceneDelegate.swift */; };
 		82B279382A3E478600D9532A /* Date.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82B279362A3E478600D9532A /* Date.storyboard */; };
@@ -45,7 +53,6 @@
 		82B3AA9E2A40E850000E705A /* DateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B3AA9C2A40E850000E705A /* DateTableViewCell.xib */; };
 		82B3AAA52A40EAC7000E705A /* DateHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B3AAA32A40EAC7000E705A /* DateHeaderTableViewCell.swift */; };
 		82B3AAA62A40EAC7000E705A /* DateHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B3AAA42A40EAC7000E705A /* DateHeaderTableViewCell.xib */; };
-		82FBD5892A69580100913F8E /* UiTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FBD5882A69580100913F8E /* UiTableView.swift */; };
 		82FD0C9A2A41A35400F05EEC /* DateTableViewInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0C992A41A35400F05EEC /* DateTableViewInteractorInput.swift */; };
 		82FD0C9C2A41A36A00F05EEC /* DateTableViewInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0C9B2A41A36A00F05EEC /* DateTableViewInteractorOutput.swift */; };
 		82FD0C9E2A41A38000F05EEC /* DateTableViewInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82FD0C9D2A41A38000F05EEC /* DateTableViewInteractor.swift */; };
@@ -72,7 +79,8 @@
 		82000C7D2A4391150003F831 /* ConvertDateFormatServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertDateFormatServiceProtocol.swift; sourceTree = "<group>"; };
 		820A75682A59825A00AB7077 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		820A75692A59825A00AB7077 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
-		822E4C062A671D00003FBEFF /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		82195DD02A753D7F00E4BCEC /* DateServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateServiceSpy.swift; sourceTree = "<group>"; };
+		821AE02F2A6DB8570000DD1D /* RateServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateServiceTests.swift; sourceTree = "<group>"; };
 		824A8B5B2A3F841B00D1ECED /* DateServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateServiceProtocol.swift; sourceTree = "<group>"; };
 		824A8B5D2A3F843900D1ECED /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		824A8B612A3F8F6100D1ECED /* RateServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateServiceProtocol.swift; sourceTree = "<group>"; };
@@ -92,9 +100,16 @@
 		824A8B882A3F9F8000D1ECED /* RateViewRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewRouterInput.swift; sourceTree = "<group>"; };
 		824A8B8A2A3F9F9800D1ECED /* RateViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewRouter.swift; sourceTree = "<group>"; };
 		824A8B8C2A3F9FBD00D1ECED /* RateViewModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateViewModuleBuilder.swift; sourceTree = "<group>"; };
+		825438CE2A6DA15700C9C9F1 /* DateServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateServiceTests.swift; sourceTree = "<group>"; };
+		827BD9532A71A06300CBB701 /* RateServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateServiceSpy.swift; sourceTree = "<group>"; };
+		827BD9562A71A36800CBB701 /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
+		827BD9582A71A3F100CBB701 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		827BD95A2A71A46C00CBB701 /* DataFetcherProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcherProtocol.swift; sourceTree = "<group>"; };
+		827BD95C2A71A56800CBB701 /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		82900A792A78543300EBCD6C /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		82900A7A2A78543300EBCD6C /* UiTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiTableView.swift; sourceTree = "<group>"; };
+		82900A7B2A78543300EBCD6C /* CornerRadExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadExt.swift; sourceTree = "<group>"; };
 		8295547C2A65CBD400C79B5A /* Exchange StoryboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Exchange StoryboardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8295547E2A65CBD400C79B5A /* Exchange_StoryboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange_StoryboardTests.swift; sourceTree = "<group>"; };
-		829554852A65CC3500C79B5A /* MyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyServiceTests.swift; sourceTree = "<group>"; };
 		82B2792D2A3E478600D9532A /* Exchange Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exchange Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82B279302A3E478600D9532A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82B279322A3E478600D9532A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +124,6 @@
 		82B3AA9C2A40E850000E705A /* DateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTableViewCell.xib; sourceTree = "<group>"; };
 		82B3AAA32A40EAC7000E705A /* DateHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		82B3AAA42A40EAC7000E705A /* DateHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateHeaderTableViewCell.xib; sourceTree = "<group>"; };
-		82FBD5882A69580100913F8E /* UiTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiTableView.swift; sourceTree = "<group>"; };
 		82FD0C992A41A35400F05EEC /* DateTableViewInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewInteractorInput.swift; sourceTree = "<group>"; };
 		82FD0C9B2A41A36A00F05EEC /* DateTableViewInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewInteractorOutput.swift; sourceTree = "<group>"; };
 		82FD0C9D2A41A38000F05EEC /* DateTableViewInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewInteractor.swift; sourceTree = "<group>"; };
@@ -173,6 +187,7 @@
 				82000C7A2A4390AB0003F831 /* ConvertDateService */,
 				824A8B5F2A3F8F1E00D1ECED /* DateService */,
 				824A8B6C2A3F900900D1ECED /* NetworkingError */,
+				827BD9552A71A33600CBB701 /* NetworkService */,
 				824A8B602A3F8F3000D1ECED /* RateService */,
 			);
 			path = Services;
@@ -273,11 +288,34 @@
 			path = LoadingCell;
 			sourceTree = "<group>";
 		};
+		827BD9552A71A33600CBB701 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				827BD9562A71A36800CBB701 /* NetworkingProtocol.swift */,
+				827BD9582A71A3F100CBB701 /* NetworkService.swift */,
+				827BD95A2A71A46C00CBB701 /* DataFetcherProtocol.swift */,
+				827BD95C2A71A56800CBB701 /* NetworkDataFetcher.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		82900A782A78543300EBCD6C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				82900A792A78543300EBCD6C /* UIViewExtension.swift */,
+				82900A7A2A78543300EBCD6C /* UiTableView.swift */,
+				82900A7B2A78543300EBCD6C /* CornerRadExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8295547D2A65CBD400C79B5A /* Exchange StoryboardTests */ = {
 			isa = PBXGroup;
 			children = (
-				8295547E2A65CBD400C79B5A /* Exchange_StoryboardTests.swift */,
-				829554852A65CC3500C79B5A /* MyServiceTests.swift */,
+				825438CE2A6DA15700C9C9F1 /* DateServiceTests.swift */,
+				82195DD02A753D7F00E4BCEC /* DateServiceSpy.swift */,
+				821AE02F2A6DB8570000DD1D /* RateServiceTests.swift */,
+				827BD9532A71A06300CBB701 /* RateServiceSpy.swift */,
 			);
 			path = "Exchange StoryboardTests";
 			sourceTree = "<group>";
@@ -304,7 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				824A8B582A3F82F800D1ECED /* Application */,
-				82FBD5872A69525F00913F8E /* Extensions */,
+				82900A782A78543300EBCD6C /* Extensions */,
 				82B279442A3E4A9100D9532A /* DateVC */,
 				824A8B682A3F8FBF00D1ECED /* Models */,
 				824A8B6F2A3F904600D1ECED /* RateVC */,
@@ -351,15 +389,6 @@
 				82B3AAA32A40EAC7000E705A /* DateHeaderTableViewCell.swift */,
 			);
 			path = HeaderCell;
-			sourceTree = "<group>";
-		};
-		82FBD5872A69525F00913F8E /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				822E4C062A671D00003FBEFF /* UIViewExtension.swift */,
-				82FBD5882A69580100913F8E /* UiTableView.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		82FD0C952A41A2BD00F05EEC /* View */ = {
@@ -513,8 +542,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8295547F2A65CBD400C79B5A /* Exchange_StoryboardTests.swift in Sources */,
-				829554862A65CC3500C79B5A /* MyServiceTests.swift in Sources */,
+				825438CF2A6DA15700C9C9F1 /* DateServiceTests.swift in Sources */,
+				821AE0302A6DB8570000DD1D /* RateServiceTests.swift in Sources */,
+				827BD9542A71A06300CBB701 /* RateServiceSpy.swift in Sources */,
+				82195DD12A753D7F00E4BCEC /* DateServiceSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +554,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				82B2794A2A3E4BA700D9532A /* DateTableViewOutput.swift in Sources */,
-				82FBD5892A69580100913F8E /* UiTableView.swift in Sources */,
 				82FD0CA02A41A3AB00F05EEC /* DateTableViewPresenterInput.swift in Sources */,
 				824A8B832A3F9F4F00D1ECED /* RateViewPresenterInput.swift in Sources */,
 				82B279482A3E4B8D00D9532A /* DateTableViewInput.swift in Sources */,
@@ -535,17 +565,22 @@
 				82FD0C9A2A41A35400F05EEC /* DateTableViewInteractorInput.swift in Sources */,
 				82B279462A3E4ADE00D9532A /* DateTableViewController.swift in Sources */,
 				824A8B772A3F90C200D1ECED /* RateViewOutput.swift in Sources */,
+				827BD9572A71A36800CBB701 /* NetworkingProtocol.swift in Sources */,
 				824A8B752A3F90B500D1ECED /* RateViewInput.swift in Sources */,
 				82FD0CA62A41A53300F05EEC /* DateTableViewRouterOutput.swift in Sources */,
 				82FD0CA22A41A3CD00F05EEC /* DateTableViewPresenterOutput.swift in Sources */,
 				824A8B8B2A3F9F9800D1ECED /* RateViewRouter.swift in Sources */,
 				824A8B5E2A3F843900D1ECED /* DateService.swift in Sources */,
+				82900A7C2A78543300EBCD6C /* UIViewExtension.swift in Sources */,
+				827BD95B2A71A46C00CBB701 /* DataFetcherProtocol.swift in Sources */,
 				82FD0C9E2A41A38000F05EEC /* DateTableViewInteractor.swift in Sources */,
 				824A8B5C2A3F841B00D1ECED /* DateServiceProtocol.swift in Sources */,
+				82900A7E2A78543300EBCD6C /* CornerRadExt.swift in Sources */,
 				824A8B732A3F908400D1ECED /* RateViewController.swift in Sources */,
 				824A8B8D2A3F9FBE00D1ECED /* RateViewModuleBuilder.swift in Sources */,
 				82000C7C2A4390C80003F831 /* ConvertDateFormatService.swift in Sources */,
 				820A756A2A59825A00AB7077 /* LoadingTableViewCell.swift in Sources */,
+				827BD9592A71A3F100CBB701 /* NetworkService.swift in Sources */,
 				824A8B852A3F9F5C00D1ECED /* RateViewPresenterOutput.swift in Sources */,
 				824A8B7F2A3F9F1300D1ECED /* RateViewInteractorOutput.swift in Sources */,
 				82000C7E2A4391150003F831 /* ConvertDateFormatServiceProtocol.swift in Sources */,
@@ -553,11 +588,12 @@
 				824A8B872A3F9F6A00D1ECED /* RateViewPresenter.swift in Sources */,
 				824A8B642A3F8F7400D1ECED /* RateService.swift in Sources */,
 				824A8B622A3F8F6100D1ECED /* RateServiceProtocol.swift in Sources */,
+				827BD95D2A71A56800CBB701 /* NetworkDataFetcher.swift in Sources */,
 				82B3AAA52A40EAC7000E705A /* DateHeaderTableViewCell.swift in Sources */,
 				824A8B812A3F9F2300D1ECED /* RateViewInteractor.swift in Sources */,
-				822E4C072A671D00003FBEFF /* UIViewExtension.swift in Sources */,
 				82FD0CA42A41A3E200F05EEC /* DateTableViewPresenter.swift in Sources */,
 				824A8B7D2A3F9F0400D1ECED /* RateViewInteractorInput.swift in Sources */,
+				82900A7D2A78543300EBCD6C /* UiTableView.swift in Sources */,
 				82B279312A3E478600D9532A /* AppDelegate.swift in Sources */,
 				824A8B6E2A3F901C00D1ECED /* NetworkingError.swift in Sources */,
 				82B279332A3E478600D9532A /* SceneDelegate.swift in Sources */,

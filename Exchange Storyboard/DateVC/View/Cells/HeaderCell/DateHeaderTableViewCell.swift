@@ -14,7 +14,6 @@ class DateHeaderTableViewCell: UITableViewHeaderFooterView {
     override func awakeFromNib() {
         super.awakeFromNib()            
                 
-      
     }
 }
 

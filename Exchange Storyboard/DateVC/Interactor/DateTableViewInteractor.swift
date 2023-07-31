@@ -12,7 +12,7 @@ final class DateTableViewInteractor:  DateTableViewInteractorInput {
     weak var output: DateTableViewInteractorOutput?
     var datesService = DateService()
 
-    func loadDate(days: Double) {
+    func loadDate(days: Int) {
         
         datesService.getData(fetchDays: days) {
             [weak self] result in

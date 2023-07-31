@@ -28,11 +28,11 @@ final class RateViewInteractor: RateViewInteractorInput{
     func loadDollar() {
         
         let convertDate = convertDateService.convertDateFormat(inputDate: dateVC) 
-        rateService.getUSD(date1: convertDate) {  [weak self] dateUSD in
+        rateService.getUSD(date: convertDate) {  [weak self] dateUSD in
            
             switch dateUSD {
             case .success(let model):
-                guard let value = model?.data?.rub?.value else {
+                guard let value = model.data?.rub?.value else {
                     print(NetworkingError.invalidData)
                     let error = self!.errorData
                     self?.output?.didRecevie(error: error)
@@ -49,11 +49,11 @@ final class RateViewInteractor: RateViewInteractorInput{
     func loadEuro() {
         
         let convertDate = convertDateService.convertDateFormat(inputDate: dateVC)
-        rateService.getEUR(date1: convertDate) { [weak self] dateEUR in
+        rateService.getEUR(date: convertDate) { [weak self] dateEUR in
             
             switch dateEUR {
             case .success(let model):
-                guard let value = model?.data?.rub?.value else {
+                guard let value = model.data?.rub?.value else {
                     print(NetworkingError.invalidData)
                     let error = "данные отсутствуют"
                     self?.output?.didRecevie(error: error)

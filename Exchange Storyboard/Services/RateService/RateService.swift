@@ -25,9 +25,9 @@ class RateService: RateServiceProtocol {
 //        return decoder
 //    }()
 //MARK: Get Dollar
-    func getUSD(date1: String, completion: @escaping (Result <MoneyModel?, Error>) -> Void) {
+    func getUSD(date: String, completion: @escaping (Result <MoneyModel, Error>) -> Void) {
 
-        guard let getURL = URL(string: "https://api.currencyapi.com/v3/historical?apikey=brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01&date=\(date1)&base_currency=USD&currencies=RUB") else {
+        guard let getURL = URL(string: "https://api.currencyapi.com/v3/historical?apikey=brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01&date=\(date)&base_currency=USD&currencies=RUB") else {
             completion(.failure(NetworkingError.badUrl))
             return
         }
@@ -71,9 +71,9 @@ class RateService: RateServiceProtocol {
     
 //MARK: Get Euro 
 
-    func getEUR(date1: String, completion: @escaping (Result <MoneyModel?, Error>) -> Void) {
+    func getEUR(date: String, completion: @escaping (Result <MoneyModel, Error>) -> Void) {
         
-        guard let getURL = URL(string: "https://api.currencyapi.com/v3/historical?apikey=brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01&date=\(date1)&base_currency=EUR&currencies=RUB") else {
+        guard let getURL = URL(string: "https://api.currencyapi.com/v3/historical?apikey=brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01&date=\(date)&base_currency=EUR&currencies=RUB") else {
             completion(.failure(NetworkingError.badUrl))
             return
         }

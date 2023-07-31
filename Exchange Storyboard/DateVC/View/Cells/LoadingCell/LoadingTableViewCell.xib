@@ -21,6 +21,7 @@
                         <rect key="frame" x="150" y="12" width="20" height="20"/>
                     </activityIndicatorView>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="Xyb-MQ-qD5" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="jub-XJ-aC4"/>
                     <constraint firstItem="Xyb-MQ-qD5" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pRr-5S-LoA"/>
