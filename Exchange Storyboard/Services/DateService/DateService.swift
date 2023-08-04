@@ -12,9 +12,7 @@ class DateService: DateServiceProtocol {
 
     func getData(fetchDays: Int, complition: @escaping (Result<[String], Error>) -> Void) {
         
-        var dates = [String]() //пустой массив хранения дат
-        
-        //установка форматы даты
+        var dates = [String]()
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "dd MMMM yyyy"
         
@@ -23,8 +21,8 @@ class DateService: DateServiceProtocol {
         past.month = -1 //минус один месяц в прошлое
         
         let date = Date()
-        let date0 = Calendar.current.startOfDay(for: date)
-        var dateNow = date0 + (60*60*24) //текущий день
+        let dateStart = Calendar.current.startOfDay(for: date)
+        var dateNow = dateStart + (60*60*24)
         dateNow = dateNow - TimeInterval((60*60*24) * fetchDays) //вычитаем приходящее значение(дни)
         print("CurrentDay: \(dateNow)")
         print("DeductionDays: \(fetchDays)")

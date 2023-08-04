@@ -20,6 +20,7 @@ final class RateViewController: UIViewController {
         output?.viewDidLoad()
   }
 }
+
 extension RateViewController: RateViewInput {
     
     func showDate(date: String) {
@@ -28,19 +29,25 @@ extension RateViewController: RateViewInput {
     }
     
     func showUSD(usd: String) {
+        
         DispatchQueue.main.async {
+            
             self.dollarValueLabel.text = usd
         }            
     }
     
     func showEUR(eur: String) {
+        
         DispatchQueue.main.async {
+            
             self.euroValueLabel.text = eur
         }     
     }
     
     func showError(error: String) {
+        
         DispatchQueue.main.async {
+            
             self.dollarValueLabel.text = error
             self.euroValueLabel.text = error
         }

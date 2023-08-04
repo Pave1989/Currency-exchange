@@ -10,5 +10,4 @@ import Foundation
 protocol RateViewOutput {
     
     func viewDidLoad()
-
 }

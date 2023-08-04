@@ -14,6 +14,7 @@ final class RateViewPresenter {
     var interactor: RateViewInteractorInput
 
     init(interactor: RateViewInteractorInput, router: RateViewRouterInput) {
+        
         self.interactor = interactor
         self.router = router
     }
@@ -22,6 +23,7 @@ final class RateViewPresenter {
 extension RateViewPresenter: RateViewOutput {
     
     func viewDidLoad() {
+        
         interactor.loadEuro()
         interactor.loadDollar()
         let date = interactor.dateVC
@@ -32,14 +34,17 @@ extension RateViewPresenter: RateViewOutput {
 extension RateViewPresenter: RateViewInteractorOutput {
     
     func didRecevie(error: String) {
+        
         view?.showError(error: error)
     }
  
     func didLoadUSD(usdResult: String) {
+        
         view?.showUSD(usd: usdResult)
     }
     
     func didLoadEUR(eurResult: String) {
+        
         view?.showEUR(eur: eurResult)
     }
 }

@@ -33,7 +33,7 @@ final class RateServiceTests: XCTestCase {
         
         // Given
         let inputDate = "2000-10-20"
-        let expectedDataType: String = ""
+        let expectedDataType = ""
         // When
         rateService.getUSD(date: inputDate) { value in
             switch value {
@@ -103,21 +103,6 @@ final class RateServiceTests: XCTestCase {
             XCTFail("Test failed")
         }
     }
-//    // Проверка обработки ошибок
-//    func testFailureResponce() {
-//        // Given
-//    let inputDate = ""
-//        let sut = RateService()
-//        let res = sut.getEUR(date: inputDate) { value in
-//        case .success:
-//            
-//        case .failure:
-//        }
-//        // When
-//      
-//        // Then
-//    }
-    
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

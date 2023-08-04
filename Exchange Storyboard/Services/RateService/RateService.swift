@@ -6,25 +6,10 @@
 //
 
 import Foundation
-//import Alamofire
-// MARK: - декомпозировать сетевой слой
+
 class RateService: RateServiceProtocol {
     
-//    private enum NeedCurrency {
-//        static let rubles = "RUB"
-//        static let dollar = "USD"
-//        static let euro = "EUR"
-//    }
-//    private let baseURL = "https://api.currencyapi.com/v3/historical"
-//    private let key = "brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01"
-////MARK: - decoder
-//    private let decoder: JSONDecoder = {
-//       let decoder = JSONDecoder()
-//       decoder.keyDecodingStrategy = .convertFromSnakeCase
-//
-//        return decoder
-//    }()
-//MARK: Get Dollar
+// Get Dollar
     func getUSD(date: String, completion: @escaping (Result <MoneyModel, Error>) -> Void) {
 
         guard let getURL = URL(string: "https://api.currencyapi.com/v3/historical?apikey=brSDcfXhHXOJ7JbXOE0KRzRR5CxBR5s2HkUg3c01&date=\(date)&base_currency=USD&currencies=RUB") else {
@@ -51,25 +36,7 @@ class RateService: RateServiceProtocol {
         session.resume()
     }
     
-    // Если работать с Alamofire то:
-//    func getUSD(date1: String,completion: @escaping (Result<MoneyModel?, Error>) -> Void) {
-//
-//        let parameters = ["apikey": key,
-//                        "date": date1,
-//                        "base_currency": NeedCurrency.dollar,
-//                        "currencies": NeedCurrency.rubles]
-//
-//        AF.request(baseURL, method: .get, parameters: parameters).responseDecodable(of: MoneyModel.self, decoder: decoder) { response in
-//            switch response.result {
-//            case .success(let value):
-//                completion(.success(value))
-//            case .failure(let error):
-//                print(error)
-//        }
-//    }
-//}
-    
-//MARK: Get Euro 
+// Get Euro
 
     func getEUR(date: String, completion: @escaping (Result <MoneyModel, Error>) -> Void) {
         

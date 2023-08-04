@@ -13,12 +13,12 @@ final class DateTableViewController: UITableViewController {
     private let headerID = "headerID"
     private let loadingID = "loadingID"
     private var datesArray: [String] = [] // массив для загрузки из сервиса
-    private var titleDate: String = "Список дат:"
-    private var scrollActive: Bool = false //булева чтобы пагинация не срабатывала n-раз
+    private var titleDate = "Список дат:"
+    private var scrollActive = false //булева чтобы пагинация не срабатывала n-раз
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-                       
         output?.viewDidLoad()
         tableView.register(UINib(nibName: String(describing: DateTableViewCell.self), bundle: nil), forCellReuseIdentifier: cellID)
         tableView.register(UINib(nibName: String(describing: DateHeaderTableViewCell.self), bundle: nil), forHeaderFooterViewReuseIdentifier: headerID)
@@ -27,6 +27,7 @@ final class DateTableViewController: UITableViewController {
     }
 // HeaderCell:
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: headerID) as! DateHeaderTableViewCell
         header.dateTitleLabel.text = titleDate
         
@@ -39,7 +40,7 @@ final class DateTableViewController: UITableViewController {
     }
 // TableCell:
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
+        
             return datesArray.count
     }
   
@@ -51,6 +52,7 @@ final class DateTableViewController: UITableViewController {
             
             return cell
         } else {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DateTableViewCell
             let textValue = datesArray[indexPath.row]
             cell.dateLabel.text = "\(textValue)"

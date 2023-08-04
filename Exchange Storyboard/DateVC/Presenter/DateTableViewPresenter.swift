@@ -15,9 +15,8 @@ final class DateTableViewPresenter {
     private var currentDays = 0
     private var lastDays = 1
     
-    init(
-         interactor: DateTableViewInteractorInput,
-         router: DateTableViewRouterOutput) {
+    init(interactor: DateTableViewInteractorInput,router: DateTableViewRouterOutput) {
+        
             self.interactor = interactor
             self.router = router
     }
@@ -29,26 +28,35 @@ extension DateTableViewPresenter: DateTableViewOutput {
         
         interactor.loadDate(days: self.currentDays)
     }
+    
     func didTapCell(dateTap: String) {
         
         router.openRate(for: dateTap)
     }
+    
     func fetchNext() {
+        
         currentDays = currentDays - 30
         if !isLastPage(){
             viewDidLoad()
         }else{
-            print("Error view")
+           return
         }
     }
+    
     func refresh(){
+        
         currentDays = 1
         viewDidLoad()
     }
+    
     func isFirstPage() -> Bool {
+        
         return currentDays == 1
     }
+    
     func isLastPage() -> Bool {
+        
         return currentDays == lastDays
     }
 }
@@ -62,6 +70,7 @@ extension DateTableViewPresenter:
     }
     
     func didLoad(dates: [String], availableDays: Int) {
+        
         lastDays = availableDays
         view?.showDate(dates: dates)
     }
